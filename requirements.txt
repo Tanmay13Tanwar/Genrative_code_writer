@@ -1,0 +1,8 @@
+langchain
+langchain-google-genai
+os
+PyPDF2
+pdfplumber
+openpyxl
+pandas
+docx
