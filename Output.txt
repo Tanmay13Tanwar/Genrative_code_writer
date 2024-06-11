@@ -1,0 +1,139 @@
+output using timezone.docx file
+
+> Entering new LLMChain chain...
+Prompt after formatting:
+Given the following file content:
+ I want a python program that prints prime number till hundred 
+Generate the relevant Python code.Just provide me with the code without adding the code into the main function so that it can be executed directly.do not import any external library 
+
+> Finished chain.
+code:
+ def is_prime(n):
+    """
+    Check if n is a prime number.
+
+    Args:
+        n (int): The number to check.
+
+    Returns:
+        bool: True if n is a prime number, False otherwise.
+    """
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def print_prime_numbers(n):
+    """
+    Print all prime numbers up to n.
+
+    Args:
+        n (int): The upper bound for the prime numbers to print.
+    """
+    for i in range(2, n + 1):
+        if is_prime(i):
+            print(i, end=" ")
+
+
+print_prime_numbers(100)
+
+
+ execution output:
+ name 'is_prime' is not defined
+PS D:\vs code files\internship_task> python main.py
+D:\conda\Lib\site-packages\langchain_core\_api\deprecation.py:119: LangChainDeprecationWarning: The class `LLMChain` was deprecated in LangChain 0.1.17 and will be removed in 0.3.0. Use RunnableSequence, e.g., `prompt | llm` instead.
+  warn_deprecated(
+
+
+> Entering new LLMChain chain...
+Prompt after formatting:
+Given the following file content:
+ I want a python program that prints prime number till hundred 
+Generate the relevant Python code.Just provide me with the code without adding the code into the main function so that it can be executed directly.do not import any external library 
+
+> Finished chain.
+code:
+ def is_prime(num):
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+for i in range(1, 101):
+    if is_prime(i):
+        print(i, end=" ")
+
+
+ execution output:
+ 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+
+
+ OUTPUT USING TIMEZONE.PDF
+
+ 
+> Entering new LLMChain chain...
+Prompt after formatting:
+Given the following file content:
+ I want a python program that prints prime number till hundred 
+Generate the relevant Python code.Just provide me with the code without adding the code into the main function so that it can be executed directly.do not import any external library 
+
+> Finished chain.
+```python
+for num in range(2, 101):
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num)
+```
+code:
+ for num in range(2, 101):
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num)
+
+
+ execution output:
+ 2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
