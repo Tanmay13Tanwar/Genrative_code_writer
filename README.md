@@ -1,4 +1,17 @@
-# Genrative_code_writer
+
+
+# Project Name: Code Genie AI
+
+### Description:
+A versatile AI-powered tool designed to read content from various file formats, generate corresponding Python code, and execute it seamlessly.
+
+### Technical Points:
+
+Implemented file reading functionalities using pdfplumber, openpyxl, pandas, and python-docx to handle PDF, XLSX, CSV, and DOCX formats respectively.
+Utilized LangChain and Google Generative AI to dynamically generate and interpret Python code based on the content of the files.
+Developed an execution framework to run the generated code and capture output or errors using Python’s exec and io modules.
+
+### Tech Stack: pdfplumber, openpyxl, pandas, python-docx, LangChain, Google Generative AI, Python
 
 ## Getting Started
 
